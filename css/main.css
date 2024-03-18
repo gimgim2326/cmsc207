@@ -1,0 +1,267 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway); /* pwede natin ibahin ung font, pili tayo ng gusto natin online */
+
+* {
+  font-family: "Raleway";
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
+
+}
+
+header {
+  white-space:nowrap;
+  font-size:3vw;
+  box-shadow:0 0 15px #5F0503;
+}
+
+header img {
+  width:100%;
+  margin-right:-100%;
+  vertical-align:top;
+}
+header div {
+  position:relative;
+  z-index:1;
+  display:inline-block;
+  vertical-align:top;
+  white-space:normal;
+  width:99%;
+  text-shadow:0 0 1px white, 0 0 3px #5F0503;
+  text-align:right;
+}
+
+
+nav ul {
+  list-style-type: none;
+  padding: 20px;
+  margin: 2px;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+  position: relative; /* Make the parent li a positioned container */
+  font-weight: bold;
+}
+
+
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul li a:hover {
+  /* Change text color to red on hover */
+  color: rgb(118, 199, 236);
+  font-weight: 900;
+}
+
+footer{
+  background: linear-gradient(to left, #3d3a64, #4967ee);
+  color: #fff;
+  text-align: center;
+}
+
+
+/* Style the submenu */
+.submenu {
+  display: none; /* Hide the submenu by default */
+  position: absolute; /* Position it absolutely */
+  top: 100%; /* Position it below the parent li */
+  left: 0; /* Align it with the left edge of the parent li */
+  background-color: #fff; /* Background color */
+  border: 1px solid #ccc; /* Border */
+  padding: 10px; /* Padding */
+}
+
+/* Show the submenu when hovering over the parent li */
+nav ul li:hover .submenu {
+  display: block;
+}
+
+main {
+  padding: 20px;
+  flex: 1; /* Allow the main content to grow and fill the remaining space */
+}
+
+/* section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+} */
+
+aside {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+
+
+/* Menu */
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0;
+  background: linear-gradient(to left, #3d3a64, #4967ee);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 0px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(124, 86, 194, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+/*ito yung gagamitin ng mobile devices*/
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+/* styles for home.html*/
+
+#home{
+  padding: 30px;
+}
+
+#home-subsection{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  padding: 30px;
+}
+
+
+/* styles for about-us.html*/
+
+#about-us{
+  padding: 30px;
+}
+
+#about-us-history p{
+  text-align: justify;
+}
+
+
+/* styles for admission.html */
+
+
+/* styles for academics.html */
+
+
+/*cstyles for students-and-parents.html */
+
+
+/*styles for news-and-events.html*/
+
+
+/*styles for contact-us.html*/
