@@ -251,6 +251,11 @@ aside {
   text-align: justify;
 }
 
+p{
+  text-align: justify;
+  text-indent: 50px;
+}
+
 
 /* styles for admission.html */
 
