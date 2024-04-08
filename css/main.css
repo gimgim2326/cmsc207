@@ -253,9 +253,12 @@ aside {
 
 p{
   text-align: justify;
-  text-indent: 50px;
+  text-indent: 20px;
 }
 
+#copyright p{
+  text-align: center !important;
+}
 
 /* styles for admission.html */
 
