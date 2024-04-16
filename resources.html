@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Navarro Elementary School</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="scripts/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="images/header_background_1.png" />
+    <div>
+    </div>
+  </header>
+  <nav>
+    <section class="top-nav">
+      <div>
+        <!-- empty muna-->
+      </div>
+      <input id="menu-toggle" type="checkbox" />
+      <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+      </label>
+      <ul class="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a>
+        <li><a href="admission.html">Admission</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="students-and-parents.html">Students & Parents</a></li>
+        <li><a href="news-and-events.html">News & Events</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </section>
+  </nav>
+    <main id="main">
+
+        <div class="clearfix">
+        <div class="column-res">
+            <h2>Online Educational Tools</h2>
+            <p>Welcome to our curated collection of Online Educational Tools! In this section, 
+              we've gathered a diverse array of digital resources designed to enrich learning 
+              experiences for students, educators, and lifelong learners alike. From interactive 
+              simulations to comprehensive study guides, our carefully selected tools cater to 
+              various subjects and age groups. Whether you're seeking assistance with homework, 
+              exploring new interests, or enhancing classroom instruction, you'll find valuable 
+              resources to inspire and empower your educational journey. Dive in and discover 
+              the possibilities!</p>
+            <div class="link">      
+              <p>1. <a href="https://www.getepic.com/" target="_blank">Getepic.com</a></p>
+              <p>2. <a href="https://teacherdashboard.com/#/login" target="_blank">Teacherdashboard.com</a></p>
+              <p>3. <a href="https://www.instructure.com/" target="_blank">Instructure.com</a></p>
+              <p>4. <a href="https://www.clever.com/" target="_blank">Clever.com</a></p>
+              <p>5. <a href="https://www.powerschool.com/classroom/schoology-learning/" target="_blank">Schoology.com</a></p>
+              <p>6. <a href="https://www.prodigygame.com/main-en/" target="_blank">Prodigygame.com</a></p>
+              <p>7. <a href="https://seesaw.com/" target="_blank">Seesaw.com</a></p>
+              <p>8. <a href="https://pbskids.org/" target="_blank">Pbskids.org</a></p>
+              <p>9. <a href="https://quizizz.com/?lng=en" target="_blank">Quizizz.com</a></p>
+              <p>10. <a href="https://www.brainpop.com/" target="_blank">Brainpop.com</a></p>
+            </div>  
+        </div>
+        <div class="column-res">
+            <h2>FAQs</h2>
+            <p>Welcome to our FAQs section, where we address common queries and provide valuable 
+              insights to enhance your experience. Whether you're new to our platform or a long-time 
+              visitor, you'll find answers to frequently asked questions to assist you in navigating 
+              through our services effortlessly. Explore below to find solutions to your inquiries, 
+              and feel free to reach out if you need further assistance!</p>
+              <div class="faq">
+                <div class="question">
+                    <h2>What are the school hours?</h2>
+                    <div class="answer">
+                        <p>The official school hours is from 7:00AM to 3:00PM</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <h2>When does my child have lunch?</h2>
+                    <div class="answer">
+                        <p>Lunch hour is from 12:00PM to 1:00PM</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <h2>What are the meal prices?</h2>
+                    <div class="answer">
+                        <p>Apple - P10.00, Banana - P2.00, Rice bowl + dish of the day - P20.00. 
+                          Please see our full menu available at the school canteen.</p>
+                    </div>
+                </div>
+                <div class="question">
+                  <h2>What if my child requires medication during the school day?</h2>
+                  <div class="answer">
+                      <p>Our school has a clinic facility and a full time nurse to take care of your sick child.</p>
+                  </div>
+                </div>
+                <div class="question">
+                  <h2>What do I need to do if I must pick up my child early from school for an appointment?</h2>
+                  <div class="answer">
+                      <p>kindly go to the reception to sign-in your child for early pickup.</p>
+                  </div>
+                </div>
+                <div class="question">
+                  <h2>What do I need to do if my child is absent from school?</h2>
+                  <div class="answer">
+                      <p>If your child has been absent, kindly write an excuse letter in his or her
+                        diary. If possible, include a medical certificate.
+                      </p>
+                  </div>
+                </div>
+                <div class="question">
+                  <h2>Do you enforce a school dress code?</h2>
+                  <div class="answer">
+                      <p>Yes. The official school dress code is white blouse & green skirt for girls and
+                        white buttoned shirt & green pants for boys.
+                      </p>
+                  </div>
+                </div>
+                <div class="question">
+                  <h2>Can I volunteer in my child’s classroom?</h2>
+                  <div class="answer">
+                      <p>Yes, absolutely. Please contact our Principal to make arrangements.</p>
+                  </div>
+                </div>
+        </div>
+
+    </main>
+  <footer>
+    <div id="copyright"><p>&copy; 2024 Juan Navarro Elementary School. All rights reserved.</p></div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq .question h2').forEach(question => {
+        question.addEventListener('click', function() {
+            this.parentNode.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+
+</html>
