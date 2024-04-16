@@ -302,3 +302,16 @@ h2,h4{
 
 
 /*styles for contact-us.html*/
+.column {
+    float: left; /* Float the columns to the left */
+    width: 33%; /* Each column takes up 50% of the container width */
+    box-sizing: border-box; /* Include padding and border in the column's total width */
+    padding: 20px; /* Add some padding for spacing */
+  } 
+
+  /* Clear floats after the columns to prevent container collapsing */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
