@@ -315,3 +315,62 @@ h2,h4{
     clear: both;
     display: table;
   }
+
+/*styles for resources.html*/
+.column-res {
+  float: left; /* Float the columns to the left */
+  width: 50%; /* Each column takes up 50% of the container width */
+  box-sizing: border-box; /* Include padding and border in the column's total width */
+  padding: 20px; /* Add some padding for spacing */
+} 
+
+/* Clear floats after the columns to prevent container collapsing */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* For hypertext*/
+.link a {
+  text-decoration: none;
+  color: #00BAF0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.link a:hover:not(.active) {
+  color: #000000;
+}
+
+/* For FAQs to collapse and expand*/
+.faq .question {
+  margin-bottom: 10px;
+}
+
+.faq .answer {
+  display: none;
+  padding-left: 20px;
+}
+
+.faq .question h2, .faq .answer p {
+  text-align: left;
+}
+
+.faq .question h2 {
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+.faq .question h2::after {
+  content: "+";
+  float: right;
+}
+
+.faq .question.active .answer {
+  display: block;
+}
+
+.faq .question.active h2::after {
+  content: "-";
+}
