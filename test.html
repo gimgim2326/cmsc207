@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Navarro Elementary School</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="scripts/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="images/header_background_1.png" />
+    <div>
+    </div>
+    <style>
+      input:valid {
+        border: 2px solid green;
+      }
+
+      input:invalid {
+        border: 2px solid red;
+      }
+
+      #table1  #table2{
+        border-style: hidden;
+        border-collapse: separate;
+      }
+
+      #table2{
+        border-style: hidden;
+        border-collapse: collapse;
+      }
+
+      #table1  td, #table1 th {
+        border: 1px solid blue;
+      }
+
+      #table2  td, #table2 th{
+        border: 1px solid red;
+      }
+
+    </style>
+  </header>
+  <nav>
+    <section class="top-nav">
+      <div>
+        <!-- empty muna-->
+      </div>
+      <input id="menu-toggle" type="checkbox" />
+      <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+      </label>
+      <ul class="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a>
+        <li><a href="admission.html">Admission</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="students-and-parents.html">Students & Parents</a></li>
+        <li><a href="news-and-events.html">News & Events</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </section>
+  </nav>
+  <main id="main">
+    <div id="new-page">
+      <section id="new-page-section">
+        <h2>Template | Lorem Ipsum</h2>
+        <div class="about-us-history">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+            est laborum.
+          </p>
+      </section>
+      <fieldset>
+        <legend style="text-align: left;">Sample Fieldsets</legend>
+        <label for="name">Color: </label><input type="color"/>
+        <label for="name">Date: </label><input type="date"/>
+        <label for="name">DateTime: </label><input type="datetime"/>
+        <label for="name">Image: </label><input type="image"/>
+        <label for="name">Week: </label><input type="week"/>
+        <label for="name">Search: </label><input type="search"/>
+        <label for="name">Time: </label><input type="time"/>
+
+       
+
+
+        <select>
+          <optgroup label="label1">
+            <option>text1</option>
+            <option>text2</option>
+          </optgroup>
+          <optgroup label="label2">
+            <option>text1</option>
+            <option>text2</option>
+          </optgroup>
+        </select>
+
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="100" step="1">
+
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+
+        <label for="browser">Choose a browser:</label>
+        <input list="browsers" id="browser" name="browser">
+        
+        <datalist id="browsers">
+          <option value="Chrome">
+          <option value="Firefox">
+          <option value="Safari">
+          <option value="Edge">
+          <option value="Opera">
+        </datalist>
+
+        <form>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <input type="submit" value="Submit">
+        </form>
+
+
+    </fieldset>
+
+    <fieldset>
+      <legend style="text-align: left;">Sample Tables</legend>
+      <table id="table1">
+        <caption>Boom</caption>
+        <thead>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>3</th>
+          <th>3</th>
+        </thead>
+        <tr>
+          <td colspan="2">4 span</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td colspan="2">7 span</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+        </tr>
+      </table>
+
+      <table id="table2">
+        <thead>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+        </thead>
+        <tr>
+          <td rowspan="2">4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+        </tr>
+      </table>
+      <textarea id="message" name="message" rows="4" cols="50" placeholder="Please enter your message here..."></textarea>
+    </fieldset>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Juan Navarro Elementary School. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
