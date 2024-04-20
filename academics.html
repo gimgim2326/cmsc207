@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Navarro Elementary School</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="scripts/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="images/header_background_1.png" />
+    <div>
+    </div>
+  </header>
+  <nav>
+    <section class="top-nav">
+      <div>
+        <!-- empty muna-->
+      </div>
+      <input id="menu-toggle" type="checkbox" />
+      <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+      </label>
+      <ul class="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a>
+        <li><a href="admission.html">Admission</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="students-and-parents.html">Students & Parents</a></li>
+        <li><a href="news-and-events.html">News & Events</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </section>
+  </nav>
+  <main id="main">
+    <div id="admission-page">
+      <section id="new-page-section">
+        <h2>Academics</h2>
+        <div class="curriculum-matatag">
+          <div class="slider-curriculum">
+            <div class="slides-curriculum">
+                <div class="slide-curriculum" id="slide1"><img src="images/curriculum/1.png" alt="Image 1"></div>
+                <div class="slide-curriculum" id="slide2"><img src="images/curriculum/2.png" alt="Image 2"></div>
+                <div class="slide-curriculum" id="slide3"><img src="images/curriculum/3.png" alt="Image 3"></div>
+                <div class="slide-curriculum" id="slide3"><img src="images/curriculum/4.png" alt="Image 3"></div>
+            </div>
+            <a class="prev-curriculum" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next-curriculum" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+        
+      </section>
+      
+      <section id="curriculum">
+        <!-- Curriculum content goes here -->
+        <p>
+          Juan Navarro Elementary School will start using the new MATATAG Curriculum, which is part of the K to 12 program,
+          as introduced by the Department of Education. This change is to help our students learn better and meet their needs. 
+          By using this new curriculum, we aim to give our students a stronger and fuller education that helps them grow in all areas.
+           We are dedicated to making our school better and believe that our students will do well with this new way of learning.
+        </p>
+      </section>
+
+      <section id="agenda">
+        <!-- Agenda content goes here -->
+        <h3>MATATAG Agenda</h3>
+        <ul>
+          <li>MAke the curriculum relevant to produce job-ready, active, and responsible citizens.</li>
+          <li>TAke steps to accelerate the delivery of basic education services and provision facilities.​</li>
+          <li>TAke good care of learners by promoting learner well-being, inclusiveness learning, and positive learning environment.</li>
+          <li>Give support for teachers to teach better.</li>
+        </ul>
+      </section>
+
+      <section id="objectives">
+        <!-- Objectives content goes here -->
+        <h3>Objectives of the MATATAG Curriculum</h3>
+        <ul>
+          <li>To decongest the overcrowded curriculum that resulted in compromised fundamental skills among learners.</li>
+          <li>To make learning competencies age-appropriate and properly sequenced in terms of progression.​</li>
+          <li>To strengthen foundational skills like literacy and numeracy, and intensify values formation among learners.</li>
+        </ul>
+      </section>
+
+      <section id="school-calendar">
+        <!-- School Calendar content goes here -->
+        <div class="pdf-container">
+          <h3>DepEd School Calendar SY: 2023-2024</h3>
+          <iframe src="files/school-calendar.pdf" frameborder="0"></iframe>
+          <p class="source">Source: Department of Education</p>
+      </div>
+      </object>
+      
+      
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div id="copyright"><p>&copy; 2024 Juan Navarro Elementary School. All rights reserved.</p></div>
+  </footer>
+</body>
+
+<script>
+let slideIndex = 1;
+showSlide(slideIndex);
+
+function moveSlide(n) {
+    showSlide(slideIndex += n);
+}
+
+function showSlide(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide-curriculum");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slides[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</html>
