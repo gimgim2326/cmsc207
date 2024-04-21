@@ -453,3 +453,31 @@ iframe {
 .faq .question.active h2::after {
   content: "-";
 }
+
+.org-chart {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.org-chart > div {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.org-chart > div::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid black;
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 10px);
+}
+.org-chart > div:first-child::before {
+  display: none;
+}
