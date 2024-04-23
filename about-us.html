@@ -201,6 +201,10 @@
                 <img src="images/faculty_staff/fs-3.png" alt="Principal" style="width: 100%; height: auto;" onclick="zoomImage(this)">
                 <h5 style="text-align: center;">Master Teacher I</h5>
               </div>
+               <div style="width: 800px; margin: 10px;">
+                <img src="images/faculty_staff/fs-11.png" alt="Principal" style="width: 100%; height: auto;" onclick="zoomImage(this)">
+                <h5 style="text-align: center;">Teacher III</h5>
+              </div>
               <div style="width: 800px; margin: 10px;">
                 <img src="images/faculty_staff/fs-4.png" alt="Principal" style="width: 100%; height: auto;" onclick="zoomImage(this)">
                 <h5 style="text-align: center;">Teacher III</h5>
@@ -213,12 +217,14 @@
                 <img src="images/faculty_staff/fs-6.png" alt="Principal" style="width: 100%; height: auto;" onclick="zoomImage(this)">
                 <h5 style="text-align: center;">Teacher III</h5>
               </div>
-               <div style="width: 800px; margin: 10px;">
+        
+             </div>
+             
+             <div style="display: flex; justify-content: center;">
+			  <div style="width: 800px; margin: 10px;">
                 <img src="images/faculty_staff/fs-7.png" alt="Principal" style="width: 100%; height: auto;" onclick="zoomImage(this)">
                 <h5 style="text-align: center;">Teacher III</h5>
               </div>
-             </div>
-             <div style="display: flex; justify-content: center;">
                <div style="width: 800px; margin: 10px;">
                 <img src="images/faculty_staff/fs-8.png" alt="Principal" style="width: 100%; height: auto;" onclick="zoomImage(this)">
                 <h5 style="text-align: center;">Teacher III</h5>
@@ -229,10 +235,6 @@
               </div>
                <div style="width: 800px; margin: 10px;">
                 <img src="images/faculty_staff/fs-10.png" alt="Principal" style="width: 100%; height: auto;" onclick="zoomImage(this)">
-                <h5 style="text-align: center;">Teacher III</h5>
-              </div>
-               <div style="width: 800px; margin: 10px;">
-                <img src="images/faculty_staff/fs-11.png" alt="Principal" style="width: 100%; height: auto;" onclick="zoomImage(this)">
                 <h5 style="text-align: center;">Teacher III</h5>
               </div>
                <div style="width: 800px; margin: 10px;">
@@ -386,7 +388,7 @@
   <script>
   // Function to toggle the zoomed class on the clicked div
   function zoomImage(element) {
-    // Remove zoom effect from all images
+    // Remove zoom effect sa lahat ng image
     const images = document.querySelectorAll('.zoomed');
     images.forEach(img => img.classList.remove('zoomed'));
 
@@ -415,5 +417,13 @@
     // Append the close button to the zoomed element
     parent.appendChild(closeButton);
   }
+  
+  // Function to handle escape key press
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+     const images = document.querySelectorAll('.zoomed');
+   	 images.forEach(img => img.classList.remove('zoomed'));
+    }
+  });
 </script>
 </html>
