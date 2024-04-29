@@ -113,7 +113,7 @@ aside {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #00BAF0;
   background: linear-gradient(to left, #3d3a64, #4967ee);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -230,14 +230,20 @@ aside {
 /* styles for home.html*/
 
 #home{
-  padding: 30px;
+  padding: 5px;
+}
+
+#home h1{
+  text-align: center;
+  padding: 0px;
+  margin: 5px;
 }
 
 #home-subsection{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
-  padding: 30px;
+  gap: 5px;
+  padding: 5px;
 }
 
 p{
@@ -480,4 +486,39 @@ iframe {
 }
 .org-chart > div:first-child::before {
   display: none;
+}
+
+.home-flex-container {
+    display: flex;
+    flex-direction: column; /* Default: stack items vertically */
+    margin: 5px;
+    padding: 5px;
+}
+
+.home-image-container,
+.home-text-container {
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+}
+
+.home-image-container img {
+    width: 100%; /* Set the width of the image to 100% of its container */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    margin: 5px;
+    padding: 5px;
+}
+
+@media (min-width: 1200px) {
+    .home-flex-container {
+        flex-direction: row; /* Stack items horizontally for screens larger than 768px */
+    }
+    
+    .home-image-container {
+        order: 1; /* Place image container at the top */
+    }
+    
+    .home-text-container {
+        order: 2; /* Place text container at the bottom */
+    }
 }

@@ -54,7 +54,7 @@
         </div>
         <div class="column">
             <h2>Contact Us</h2>
-            <form id="contact-us" action="submit.php" method="post" enctype="text/plain">
+            <form id="contact-us-form" action="submit.php" method="post" enctype="text/plain">
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" required><br>
 
@@ -81,5 +81,11 @@
   </footer>
 
 </body>
+<script>
+document.getElementById("contact-us-form").addEventListener("submit", function(event) {
+  event.preventDefault(); 
+  alert("We appreciate you reaching out to JNES. Rest assured, a member of our team will be in touch with you shortly. Thank you!");
+  });
+</script>
 
 </html>
